@@ -1,34 +1,24 @@
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from "react-helmet";
 
 interface SEOProps {
   title?: string;
   description?: string;
   keywords?: string;
-  canonicalUrl?: string;
-  ogTitle?: string;
-  ogDescription?: string;
   ogImage?: string;
-  ogType?: string;
-  twitterTitle?: string;
-  twitterDescription?: string;
+  ogUrl?: string;
   twitterImage?: string;
-  noindex?: boolean;
+  canonicalUrl?: string;
   children?: React.ReactNode;
 }
 
 const SEO = ({
-  title = "JezX - Code the Future | Enterprise Software Development & AI Solutions",
-  description = "JezX specializes in enterprise-grade software development with advanced AI integration. We engineer custom software solutions that transform businesses globally. Code the Future with JezX.",
-  keywords = "Software Development, Code the Future, AI Integration, Enterprise Software, Custom Software Engineering, Software Solutions, Advanced Automation, AI-Powered Development",
+  title = "JezX - Code the Future",
+  description = "JezX is a leading software development company specializing in AI-powered solutions, custom software development, and digital transformation services.",
+  keywords = "JezX, software development, AI solutions, digital transformation, custom software, web development, mobile apps, enterprise solutions",
+  ogImage = "/logo/logo.png",
+  ogUrl = "https://jezx.in",
+  twitterImage = "/logo/logo.png",
   canonicalUrl = "https://jezx.in",
-  ogTitle = "JezX - Code the Future | Enterprise Software Development & AI Solutions",
-  ogDescription = "JezX specializes in enterprise-grade software development with advanced AI integration. We engineer custom software solutions that transform businesses globally. Code the Future with JezX.",
-  ogImage = "https://lovable.dev/opengraph-image-p98pqg.png",
-  ogType = "website",
-  twitterTitle = "JezX - Code the Future | Enterprise Software Development",
-  twitterDescription = "Custom software engineering with advanced AI integration that transforms businesses globally. Code the Future with JezX.",
-  twitterImage = "https://lovable.dev/opengraph-image-p98pqg.png",
-  noindex = false,
   children,
 }: SEOProps) => {
   return (
@@ -37,32 +27,22 @@ const SEO = ({
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      
-      {/* Canonical Link */}
       <link rel="canonical" href={canonicalUrl} />
-      
-      {/* Open Graph Meta Tags */}
-      <meta property="og:title" content={ogTitle} />
-      <meta property="og:description" content={ogDescription} />
-      <meta property="og:type" content={ogType} />
-      <meta property="og:url" content={canonicalUrl} />
+
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content={ogUrl} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
-      <meta property="og:site_name" content="JezX Technologies" />
-      
-      {/* Twitter Card Meta Tags */}
+
+      {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@jezx_dev" />
-      <meta name="twitter:title" content={twitterTitle} />
-      <meta name="twitter:description" content={twitterDescription} />
+      <meta name="twitter:url" content={ogUrl} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={twitterImage} />
-      
-      {/* Indexing Control */}
-      {noindex ? (
-        <meta name="robots" content="noindex, nofollow" />
-      ) : (
-        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-      )}
-      
+
       {children}
     </Helmet>
   );

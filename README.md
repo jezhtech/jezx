@@ -1,73 +1,100 @@
-# Welcome to your Lovable project
+# JezX - Official Website
 
-## Project info
+<div align="center">
+  <img src="./public/logo/logo.png" alt="JezX Logo" width="200"/>
+  <h3>Code the Future</h3>
+</div>
 
-**URL**: https://lovable.dev/projects/de3f52e8-e51b-42fc-b44f-966e0b7fb0af
+## Overview
 
-## How can I edit this code?
+This repository contains the official website for JezX, a brand of Jezh Technologies Private Limited. JezX specializes in AI-powered software solutions, custom development, and digital transformation services designed to help businesses automate processes and drive growth.
 
-There are several ways of editing your application.
+## Intellectual Property Notice
 
-**Use Lovable**
+© 2025 Jezh Technologies Private Limited. All Rights Reserved.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/de3f52e8-e51b-42fc-b44f-966e0b7fb0af) and start prompting.
+**IMPORTANT LEGAL NOTICE:**
 
-Changes made via Lovable will be committed automatically to this repo.
+This codebase and all associated assets, designs, and content are the exclusive intellectual property of Jezh Technologies Private Limited. Any unauthorized use, reproduction, modification, distribution, or display of this software without explicit written permission from Jezh Technologies Private Limited is strictly prohibited and may result in severe legal consequences.
 
-**Use your preferred IDE**
+## Technology Stack
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+This website is built using modern web technologies:
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- **Frontend Framework**: React with TypeScript
+- **Build Tool**: Vite
+- **UI Components**: shadcn/ui
+- **Styling**: Tailwind CSS
+- **Routing**: React Router
+- **State Management**: React Query
 
-Follow these steps:
+## Development
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### Prerequisites
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- Node.js (v16.0.0 or higher)
+- npm (v7.0.0 or higher)
 
-# Step 3: Install the necessary dependencies.
-npm i
+### Local Development
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+For authorized developers, follow these steps to set up the local development environment:
+
+```bash
+# Clone the repository
+git clone [repository-url]
+
+# Navigate to project directory
+cd jezx-ai-nexus-website-main
+
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The development server will be available at `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Build for Production
 
-**Use GitHub Codespaces**
+```bash
+# Generate production build
+npm run build
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+# Preview production build locally
+npm run preview
+```
 
-## What technologies are used for this project?
+## Deployment
 
-This project is built with:
+The website is configured for deployment to various hosting platforms including Vercel, Netlify, and traditional web hosting services. The build process includes special handling for SPA routing to ensure proper navigation.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Project Structure
 
-## How can I deploy this project?
+```
+jezx-ai-nexus-website-main/
+├── public/             # Static assets
+│   ├── logo/           # Logo files
+│   └── ...
+├── src/
+│   ├── components/     # Reusable UI components
+│   ├── pages/          # Page components
+│   ├── lib/            # Utility functions and helpers
+│   ├── App.tsx         # Main application component
+│   └── main.tsx        # Application entry point
+├── index.html          # HTML template
+└── package.json        # Project dependencies and scripts
+```
 
-Simply open [Lovable](https://lovable.dev/projects/de3f52e8-e51b-42fc-b44f-966e0b7fb0af) and click on Share -> Publish.
+## Contact Information
 
-## Can I connect a custom domain to my Lovable project?
+For inquiries regarding this website or to request permission for use:
 
-Yes, you can!
+- **Email**: info@jezx.in
+- **Phone**: +91 91505 37718
+- **Website**: [https://jezx.in](https://jezx.in)
+- **Address**: Nagercoil, Kanyakumari, Tamil Nadu, India
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## License
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+This project is proprietary software. No license is granted for its use, modification, or distribution without explicit written permission from Jezh Technologies Private Limited.

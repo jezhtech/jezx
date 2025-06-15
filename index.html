@@ -2,56 +2,57 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JezX - Code the Future | Enterprise Software Development & AI Solutions</title>
-    <meta name="description" content="JezX specializes in enterprise-grade software development with advanced AI integration. We engineer custom software solutions that transform businesses globally. Code the Future with JezX." />
-    <meta name="author" content="JezX - Jezh Technologies" />
-    <meta name="keywords" content="Software Development, Code the Future, AI Integration, Enterprise Software, Custom Software Engineering, Software Solutions, Advanced Automation, AI-Powered Development" />
+    <meta name="theme-color" content="#000000" />
     
-    <!-- PWA Support -->
-    <link rel="manifest" href="/manifest.json" />
-    <meta name="theme-color" content="#00d4ff" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta name="apple-mobile-web-app-title" content="JezX - Code the Future" />
+    <!-- Primary Meta Tags -->
+    <title>JezX - Code the Future</title>
+    <meta name="title" content="JezX - Code the Future" />
+    <meta name="description" content="JezX is a leading software development company specializing in AI-powered solutions, custom software development, and digital transformation services." />
+    <meta name="keywords" content="JezX, software development, AI solutions, digital transformation, custom software, web development, mobile apps, enterprise solutions" />
     
-    <!-- Performance Optimizations -->
-    <link rel="dns-prefetch" href="https://jezx.in" />
-    <link rel="preconnect" href="https://jezx.in" crossorigin />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://jezx.in" />
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="JezX - Code the Future | Enterprise Software Development & AI Solutions" />
-    <meta property="og:description" content="JezX specializes in enterprise-grade software development with advanced AI integration. We engineer custom software solutions that transform businesses globally. Code the Future with JezX." />
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://jezx.in" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-    <meta property="og:site_name" content="JezX Technologies" />
+    <meta property="og:url" content="https://jezx.in/" />
+    <meta property="og:title" content="JezX - Code the Future" />
+    <meta property="og:description" content="JezX is a leading software development company specializing in AI-powered solutions, custom software development, and digital transformation services." />
+    <meta property="og:image" content="/logo/logo.png" />
     
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@jezx_dev" />
-    <meta name="twitter:title" content="JezX - Code the Future | Enterprise Software Development" />
-    <meta name="twitter:description" content="Custom software engineering with advanced AI integration that transforms businesses globally. Code the Future with JezX." />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://jezx.in/" />
+    <meta property="twitter:title" content="JezX - Code the Future" />
+    <meta property="twitter:description" content="JezX is a leading software development company specializing in AI-powered solutions, custom software development, and digital transformation services." />
+    <meta property="twitter:image" content="/logo/logo.png" />
     
-    <!-- Favicon -->
-    <link rel="icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <!-- Canonical -->
+    <link rel="canonical" href="https://jezx.in/" />
     
-    <!-- Additional SEO Meta Tags -->
-    <meta name="robots" content="index, follow" />
-    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Base URL for SPA routing -->
+    <base href="/" />
+    
+    <script>
+      // Script to handle direct navigation in SPA
+      (function() {
+        // Save the initial path for later use
+        var path = window.location.pathname.substring(1);
+        if (path && path !== '/') {
+          window.initialPath = path;
+        }
+      })();
+    </script>
   </head>
-
   <body>
     <div id="root"></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>

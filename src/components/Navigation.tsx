@@ -1,6 +1,5 @@
-
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Menu, X, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import ProjectInquiryDialog from "@/components/ProjectInquiryDialog";
@@ -10,6 +9,7 @@ const Navigation = () => {
   const [scrolled, setScrolled] = useState(false);
   const [showProjectDialog, setShowProjectDialog] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,6 +18,23 @@ const Navigation = () => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Custom navigation handler that ensures scroll to top
+  const handleNavigation = (path: string) => {
+    if (location.pathname === path) {
+      // If already on the same page, just scroll to top
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      });
+    } else {
+      // Navigate to the new page
+      navigate(path);
+    }
+    // Close mobile menu if open
+    setIsOpen(false);
+  };
 
   const navItems = [
     { name: "Home", path: "/" },
@@ -42,34 +59,33 @@ const Navigation = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
-            <Link to="/" className="flex items-center space-x-3 group">
+            <div 
+              onClick={() => handleNavigation("/")}
+              className="flex items-center space-x-3 group cursor-pointer"
+            >
               <div className="relative">
                 <img 
-                  src="/lovable-uploads/ef70d02e-cf58-4f14-99cf-d2ec71c1b788.png" 
+                  src="/logo/logo.png" 
                   alt="JezX Logo" 
                   className="h-10 w-auto transition-all duration-300 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-jezx-cyan/20 to-transparent rounded-full blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
-              <div className="hidden sm:block">
-                <span className="text-xl font-bold text-gradient">JezX</span>
-                <div className="text-xs text-jezx-cyan/80">Code the Future</div>
-              </div>
-            </Link>
+            </div>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-12">
               {navItems.map((item, index) => (
-                <Link
+                <div
                   key={item.name}
-                  to={item.path}
-                  className={`nav-link text-sm font-medium transition-all duration-300 ${
+                  onClick={() => handleNavigation(item.path)}
+                  className={`nav-link text-sm font-medium transition-all duration-300 cursor-pointer ${
                     isActive(item.path) ? "text-jezx-cyan" : "text-white/90 hover:text-white"
                   }`}
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   {item.name}
-                </Link>
+                </div>
               ))}
               
               <Button 
@@ -101,19 +117,18 @@ const Navigation = () => {
             <div className="glass-effect rounded-2xl mt-4 mb-6 p-6">
               <div className="space-y-4">
                 {navItems.map((item, index) => (
-                  <Link
+                  <div
                     key={item.name}
-                    to={item.path}
-                    className={`block text-lg font-medium transition-all duration-300 hover:pl-4 ${
+                    onClick={() => handleNavigation(item.path)}
+                    className={`block text-lg font-medium transition-all duration-300 hover:pl-4 cursor-pointer ${
                       isActive(item.path)
                         ? "text-jezx-cyan"
                         : "text-white/90 hover:text-jezx-cyan"
                     }`}
                     style={{ animationDelay: `${index * 0.1}s` }}
-                    onClick={() => setIsOpen(false)}
                   >
                     {item.name}
-                  </Link>
+                  </div>
                 ))}
                 <div className="pt-4">
                   <Button 

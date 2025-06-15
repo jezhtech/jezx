@@ -1,7 +1,24 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Sparkles, ExternalLink, ShoppingBag, Building2, Calendar, Mail, Phone, MapPin } from "lucide-react";
 
 const Footer = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+  
+  const handleNavigation = (path: string) => {
+    if (location.pathname === path) {
+      // If already on the same page, just scroll to top
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      });
+    } else {
+      // Navigate to the new page
+      navigate(path);
+    }
+  };
+
   const marketplaceItems = [
     "JezX Developer Hoodie",
     "Code the Future T-Shirt", 
@@ -24,17 +41,16 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           {/* Company Info */}
           <div className="lg:col-span-2">
-            <Link to="/" className="flex items-center space-x-3 mb-6">
+            <div 
+              onClick={() => handleNavigation("/")}
+              className="flex items-center space-x-3 mb-6 cursor-pointer"
+            >
               <img 
-                src="/lovable-uploads/ef70d02e-cf58-4f14-99cf-d2ec71c1b788.png" 
+                src="/logo/logo.png" 
                 alt="JezX Logo" 
-                className="h-12 w-auto"
+                className="h-16 w-auto transition-all duration-300 hover:scale-105"
               />
-              <div>
-                <span className="text-2xl font-bold text-gradient">JezX</span>
-                <div className="text-sm text-jezx-cyan/80">Code the Future</div>
-              </div>
-            </Link>
+            </div>
             <p className="text-white/70 text-lg leading-relaxed mb-6">
               Transforming businesses with innovative AI-powered software solutions that automate processes and drive unprecedented growth.
             </p>
@@ -61,10 +77,10 @@ const Footer = () => {
               Terms & Policy
             </h3>
             <ul className="space-y-4">
-              <li><Link to="/terms" className="text-white/70 hover:text-jezx-cyan transition-colors">Terms of Use</Link></li>
-              <li><Link to="/privacy" className="text-white/70 hover:text-jezx-cyan transition-colors">Privacy Policy</Link></li>
-              <li><Link to="/security" className="text-white/70 hover:text-jezx-cyan transition-colors">Security</Link></li>
-              <li><Link to="/policies" className="text-white/70 hover:text-jezx-cyan transition-colors">Other Policies</Link></li>
+              <li><div onClick={() => handleNavigation("/terms")} className="text-white/70 hover:text-jezx-cyan transition-colors cursor-pointer">Terms of Use</div></li>
+              <li><div onClick={() => handleNavigation("/privacy")} className="text-white/70 hover:text-jezx-cyan transition-colors cursor-pointer">Privacy Policy</div></li>
+              <li><div onClick={() => handleNavigation("/security")} className="text-white/70 hover:text-jezx-cyan transition-colors cursor-pointer">Security</div></li>
+              <li><div onClick={() => handleNavigation("/policies")} className="text-white/70 hover:text-jezx-cyan transition-colors cursor-pointer">Other Policies</div></li>
             </ul>
           </div>
 
@@ -77,12 +93,12 @@ const Footer = () => {
             <ul className="space-y-4">
               {marketplaceItems.map((item, index) => (
                 <li key={index}>
-                  <Link to="/marketplace" className="text-white/70 hover:text-jezx-cyan transition-colors flex items-center">
+                  <div onClick={() => handleNavigation("/marketplace")} className="text-white/70 hover:text-jezx-cyan transition-colors flex items-center cursor-pointer">
                     {item}
-                  </Link>
+                  </div>
                 </li>
               ))}
-              <li><Link to="/marketplace" className="text-jezx-cyan font-medium hover:text-white transition-colors">View More →</Link></li>
+              <li><div onClick={() => handleNavigation("/marketplace")} className="text-jezx-cyan font-medium hover:text-white transition-colors cursor-pointer">View More →</div></li>
             </ul>
           </div>
 
@@ -95,9 +111,9 @@ const Footer = () => {
             <ul className="space-y-4">
               {latestProducts.map((product, index) => (
                 <li key={index}>
-                  <Link to={product.path} className="text-white/70 hover:text-jezx-cyan transition-colors">
+                  <div onClick={() => handleNavigation(product.path)} className="text-white/70 hover:text-jezx-cyan transition-colors cursor-pointer">
                     {product.name}
-                  </Link>
+                  </div>
                 </li>
               ))}
             </ul>
@@ -108,17 +124,17 @@ const Footer = () => {
         <div className="border-t border-jezx-cyan/20 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center space-x-8 mb-4 md:mb-0">
-              <Link to="/about" className="text-white/70 hover:text-jezx-cyan transition-colors flex items-center">
+              <div onClick={() => handleNavigation("/about")} className="text-white/70 hover:text-jezx-cyan transition-colors flex items-center cursor-pointer">
                 <Building2 className="w-4 h-4 mr-2" />
                 About Us
-              </Link>
-              <Link to="/careers" className="text-white/70 hover:text-jezx-cyan transition-colors">
+              </div>
+              <div onClick={() => handleNavigation("/careers")} className="text-white/70 hover:text-jezx-cyan transition-colors cursor-pointer">
                 Careers
-              </Link>
-              <Link to="/consultation" className="text-white/70 hover:text-jezx-cyan transition-colors flex items-center">
+              </div>
+              <div onClick={() => handleNavigation("/consultation")} className="text-white/70 hover:text-jezx-cyan transition-colors flex items-center cursor-pointer">
                 <Calendar className="w-4 h-4 mr-2" />
                 Schedule Consultation
-              </Link>
+              </div>
             </div>
             <div className="text-white/60 text-sm">
               © 2025 JezX | Brand of <a href="https://www.jezhtechnologies.com" target="_blank" rel="noopener noreferrer" className="text-jezx-cyan hover:text-white transition-colors">Jezh Technologies</a>. All rights reserved.

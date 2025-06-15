@@ -116,4 +116,56 @@ export const BreadcrumbStructuredData = ({
       </script>
     </Helmet>
   );
+};
+
+interface AboutPageStructuredDataProps {
+  url?: string;
+  name?: string;
+  description?: string;
+  foundingDate?: string;
+  foundingLocation?: string;
+  numberOfEmployees?: string;
+}
+
+export const AboutPageStructuredData = ({
+  url = "https://jezx.in/about",
+  name = "JezX Technologies",
+  description = "JezX is a brand of Jezh Technologies focused on innovative AI-powered software development. Our team of global innovators is revolutionizing how businesses operate through intelligent automation and cutting-edge solutions.",
+  foundingDate = "2015",
+  foundingLocation = "Nagercoil, India",
+  numberOfEmployees = "10-50"
+}: AboutPageStructuredDataProps) => {
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": name,
+      "description": description,
+      "url": url,
+      "foundingDate": foundingDate,
+      "foundingLocation": foundingLocation,
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "value": numberOfEmployees
+      },
+      "knowsAbout": [
+        "Software Development",
+        "Artificial Intelligence",
+        "Machine Learning",
+        "Enterprise Software",
+        "Custom Software Engineering",
+        "AI Integration",
+        "Digital Transformation"
+      ]
+    }
+  };
+
+  return (
+    <Helmet>
+      <script type="application/ld+json">
+        {JSON.stringify(structuredData)}
+      </script>
+    </Helmet>
+  );
 }; 

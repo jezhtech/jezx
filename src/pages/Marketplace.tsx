@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -18,7 +17,7 @@ const Marketplace = () => {
       id: 1,
       name: "JezX Developer Hoodie",
       price: 79.99,
-      image: "/lovable-uploads/1c17c435-ab75-49c5-810e-f4ac4ac771d3.png",
+      image: "/placeholder.svg",
       category: "clothing",
       rating: 4.8,
       description: "Premium quality hoodie with JezX logo, perfect for coding sessions.",
@@ -28,7 +27,7 @@ const Marketplace = () => {
       id: 2,
       name: "Code the Future T-Shirt",
       price: 29.99,
-      image: "/lovable-uploads/1c17c435-ab75-49c5-810e-f4ac4ac771d3.png",
+      image: "/placeholder.svg",
       category: "clothing",
       rating: 4.9,
       description: "Comfortable cotton t-shirt with inspirational coding message.",
@@ -38,7 +37,7 @@ const Marketplace = () => {
       id: 3,
       name: "JezX Mechanical Keyboard",
       price: 149.99,
-      image: "/lovable-uploads/1c17c435-ab75-49c5-810e-f4ac4ac771d3.png",
+      image: "/placeholder.svg",
       category: "tech",
       rating: 4.7,
       description: "RGB mechanical keyboard designed for developers.",
@@ -48,7 +47,7 @@ const Marketplace = () => {
       id: 4,
       name: "Developer Mug Set",
       price: 24.99,
-      image: "/lovable-uploads/1c17c435-ab75-49c5-810e-f4ac4ac771d3.png",
+      image: "/placeholder.svg",
       category: "accessories",
       rating: 4.6,
       description: "Set of 2 mugs with funny developer quotes.",
@@ -58,7 +57,7 @@ const Marketplace = () => {
       id: 5,
       name: "JezX Laptop Stickers Pack",
       price: 12.99,
-      image: "/lovable-uploads/1c17c435-ab75-49c5-810e-f4ac4ac771d3.png",
+      image: "/placeholder.svg",
       category: "accessories",
       rating: 4.8,
       description: "Collection of premium vinyl stickers for your laptop.",
@@ -68,7 +67,7 @@ const Marketplace = () => {
       id: 6,
       name: "AI Programming Cap",
       price: 34.99,
-      image: "/lovable-uploads/1c17c435-ab75-49c5-810e-f4ac4ac771d3.png",
+      image: "/placeholder.svg",
       category: "clothing",
       rating: 4.5,
       description: "Stylish cap with AI-themed embroidery.",
