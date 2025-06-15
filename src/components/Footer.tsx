@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Sparkles, ExternalLink, ShoppingBag, Building2, Calendar, Mail, Phone, MapPin } from "lucide-react";
 
@@ -42,15 +41,15 @@ const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center text-white/60">
                 <Mail className="w-5 h-5 mr-3 text-jezx-cyan" />
-                <span>hello@jezx.dev</span>
+                <span>info@jezx.in</span>
               </div>
               <div className="flex items-center text-white/60">
                 <Phone className="w-5 h-5 mr-3 text-jezx-cyan" />
-                <span>+1 (555) 123-4567</span>
+                <span>+91 91505 37718</span>
               </div>
               <div className="flex items-center text-white/60">
                 <MapPin className="w-5 h-5 mr-3 text-jezx-cyan" />
-                <span>San Francisco, CA</span>
+                <span>Nagercoil, Kanyakumari</span>
               </div>
             </div>
           </div>
@@ -122,7 +121,7 @@ const Footer = () => {
               </Link>
             </div>
             <div className="text-white/60 text-sm">
-              © 2024 JezX. All rights reserved.
+              © 2025 JezX | Brand of <a href="https://www.jezhtechnologies.com" target="_blank" rel="noopener noreferrer" className="text-jezx-cyan hover:text-white transition-colors">Jezh Technologies</a>. All rights reserved.
             </div>
           </div>
         </div>

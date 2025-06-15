@@ -1,4 +1,3 @@
-
 import Navigation from "@/components/Navigation";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -47,21 +46,21 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email Us",
-      content: "hello@jezx.com",
+      content: "info@jezx.in",
       description: "Get instant responses to your inquiries",
       gradient: "from-blue-500 to-cyan-500"
     },
     {
       icon: Phone,
       title: "Call Us",
-      content: "+1 (555) 123-4567",
+      content: "+91 91505 37718",
       description: "Direct line to our innovation team",
       gradient: "from-purple-500 to-pink-500"
     },
     {
       icon: MapPin,
       title: "Visit Us",
-      content: "123 Innovation Street, Tech City, TC 12345",
+      content: "Nagercoil, Kanyakumari",
       description: "Our state-of-the-art headquarters",
       gradient: "from-green-500 to-emerald-500"
     },

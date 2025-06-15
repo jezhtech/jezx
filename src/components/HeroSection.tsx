@@ -23,7 +23,7 @@ const HeroSection = () => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 glass-effect rounded-full px-6 py-3 mb-8 group hover:premium-glow transition-all duration-500">
             <Star className="w-4 h-4 text-jezx-cyan animate-pulse" />
-            <span className="text-sm font-medium text-white/90">AI-Powered Development Excellence</span>
+            <span className="text-sm font-medium text-white/90">World-Class Software Development Excellence</span>
             <Sparkles className="w-4 h-4 text-jezx-cyan animate-pulse" />
           </div>
           
@@ -33,9 +33,9 @@ const HeroSection = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-white/80 mb-12 max-w-4xl mx-auto leading-relaxed">
-            Revolutionary Software Development with{" "}
+            Enterprise-Grade Software Development with{" "}
             <span className="text-gradient-secondary font-semibold">Advanced AI Integration</span>.
-            We automate, innovate, and deliver cutting-edge solutions that transform your vision into reality.
+            We engineer, innovate, and deliver cutting-edge software solutions that transform businesses globally.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-16">
@@ -65,8 +65,8 @@ const HeroSection = () => {
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-br from-jezx-cyan/20 to-transparent rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-gradient transition-all duration-300">AI Integration</h3>
-              <p className="text-white/70 leading-relaxed">Advanced AI features seamlessly integrated into every aspect of development, creating intelligent and adaptive solutions.</p>
+              <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-gradient transition-all duration-300">AI-Powered Development</h3>
+              <p className="text-white/70 leading-relaxed">Enterprise-grade AI technology seamlessly integrated into custom software solutions, creating intelligent systems that evolve with your business needs.</p>
             </div>
 
             <div className="glass-card p-8 rounded-2xl hover:premium-glow transition-all duration-500 hover:transform hover:scale-105 group morphing-shape" style={{ animationDelay: "0.2s" }}>
@@ -76,8 +76,8 @@ const HeroSection = () => {
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-br from-jezx-cyan/20 to-transparent rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-gradient transition-all duration-300">Smart Automation</h3>
-              <p className="text-white/70 leading-relaxed">Intelligent automation that streamlines processes, reduces manual work, and accelerates development cycles.</p>
+              <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-gradient transition-all duration-300">Advanced Automation</h3>
+              <p className="text-white/70 leading-relaxed">Industry-leading automation framework that transforms business processes, eliminates inefficiencies, and accelerates software development lifecycles.</p>
             </div>
 
             <div className="glass-card p-8 rounded-2xl hover:premium-glow transition-all duration-500 hover:transform hover:scale-105 group morphing-shape" style={{ animationDelay: "0.4s" }}>
@@ -87,8 +87,8 @@ const HeroSection = () => {
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-br from-jezx-cyan/20 to-transparent rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-300"></div>
               </div>
-              <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-gradient transition-all duration-300">Custom Solutions</h3>
-              <p className="text-white/70 leading-relaxed">Bespoke software architecture tailored specifically to your industry requirements and business objectives.</p>
+              <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-gradient transition-all duration-300">Enterprise Solutions</h3>
+              <p className="text-white/70 leading-relaxed">Future-ready software architecture engineered to scale, designed specifically to address complex business challenges across industries worldwide.</p>
             </div>
           </div>
         </div>
